@@ -1,0 +1,13 @@
+[gd_scene format=2]
+
+[node name="gameStartScreen" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 388.0
+margin_top = 323.0
+margin_right = 563.0
+margin_bottom = 363.0
+text = "Press [spacebar] to start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
