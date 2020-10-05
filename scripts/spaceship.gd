@@ -11,7 +11,7 @@ var screen_buffer = 10
 
 var motion = Vector2(0, 0)
 
-var lives = 1
+var lives = 5
 
 func _ready():
     screen_size = get_viewport_rect().size
