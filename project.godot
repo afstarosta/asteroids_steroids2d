@@ -17,7 +17,6 @@ _global_script_class_icons={
 
 config/name="asteroids2d"
 run/main_scene="res://scenes/main.tscn"
-config/icon="res://icon.png"
 
 [input]
 
@@ -36,8 +35,7 @@ ui_fire={
 
 [physics]
 
-2d/physics_engine="GodotPhysics"
-2d/thread_model=2
+2d/thread_model=0
 
 [rendering]
 
