@@ -1,5 +1,6 @@
 extends Area2D
 
+onready var explosion_scene_preload = load('res://scenes/explosionEffect.tscn')
 var THRUSTER_SPEED = 150
 var TURN_SPEED = 180
 
@@ -8,6 +9,7 @@ var DEC = 0.02
 
 var screen_size
 var screen_buffer = 10
+var explosion_effect
 
 var motion = Vector2(0, 0)
 
@@ -15,6 +17,9 @@ var lives = 5
 
 func _ready():
     screen_size = get_viewport_rect().size
+    var explosion_scene = explosion_scene_preload.instance()
+    explosion_effect = explosion_scene.get_node('CPUParticles2D')
+    add_child(explosion_scene)
     
 func _process(delta):
     process_movement(delta)
@@ -52,6 +57,7 @@ func adjust_position():
 func take_damage():
     lives -= 1
     get_node('/root/main/gameManager').update_lives(lives)
+    explosion_effect.restart()
     if(lives) <= 0:
         get_node('/root/main/gameManager').end_game()
 

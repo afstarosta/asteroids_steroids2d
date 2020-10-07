@@ -4,6 +4,10 @@ var current_scale = 2
 var next_asteroid_size
 var MOVE_SPEED = 100
 var status = 'alive'
+var rng = RandomNumberGenerator.new()
+
+func _ready():
+    self.get_node("Sprite").rotation_degrees = rng.randi_range(0, 360)
 
 func init(number):
     if(number > 0):
