@@ -39,6 +39,7 @@ func fire(inacuracy=0):
     if(inacuracy):
         bullet.rotation_degrees += rng.randi_range(-inacuracy, inacuracy)
     bullet.position = self.global_position
+    get_node('/root/main/shooting').play(0.0)
     
 func single_shot():
     if is_fire_pressed_and_timer(0.1):

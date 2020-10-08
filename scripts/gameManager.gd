@@ -62,5 +62,4 @@ func start_game():
 
     game_ui.update_score(0)
     current_score = 0
-    game_ui.update_lives(5)
     

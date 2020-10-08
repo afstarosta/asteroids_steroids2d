@@ -1,23 +1,20 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scripts/game_ui.gd" type="Script" id=1]
-
+[ext_resource path="res://scenes/lives.gd" type="Script" id=2]
 
 [node name="gameUi" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="scoreText" type="RichTextLabel" parent="."]
-margin_left = 978.0
+margin_left = 978.418
 margin_top = 5.0
-margin_right = 1018.0
+margin_right = 1018.42
 margin_bottom = 45.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="livesText" type="RichTextLabel" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="lives" type="Node2D" parent="."]
+position = Vector2( 10.8711, 10.0349 )
+script = ExtResource( 2 )
