@@ -44,6 +44,7 @@ func end_game():
     end_screen.set_score_text(current_score)
 
 func start_game():
+    get_node('/root/main/start').play(0.0)
     is_game_running = true
     var screen_size = get_viewport_rect().size
     spaceship = spaceship_scene.instance()

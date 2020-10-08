@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/gameManager.tscn" type="PackedScene" id=1]
 [ext_resource path="res://song.wav" type="AudioStream" id=2]
 [ext_resource path="res://shot.wav" type="AudioStream" id=3]
 [ext_resource path="res://explosion.wav" type="AudioStream" id=4]
+[ext_resource path="res://start.wav" type="AudioStream" id=5]
 
 [node name="main" type="Node2D"]
 
@@ -21,3 +22,6 @@ attenuation = 4.28709
 [node name="explosion" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
 attenuation = 1.41421
+
+[node name="start" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
